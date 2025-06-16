@@ -1,0 +1,46 @@
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+.section1{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: azure;
+}
+
+.div1{
+    display: flex;
+    justify-content: space-around;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px;
+    padding-right: 250px;
+    
+}
+.div2{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 30px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+#resultado{
+    font-size: 30px;
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+
+div{
+    display: flex;
+    flex-direction: column;
+}
+
+.um{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+}
+
+.dois{
+    display: flex;
+    background-color: lightblue;
+    padding: 25px;
+}
+
+#multa{
+    font-size: 30px;
+    text-align: center;
+}
+

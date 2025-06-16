@@ -1,0 +1,29 @@
+body { 
+    background-color: rgb(195, 195, 221);
+
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Square Peg', cursive;
+    font-size: 25px;
+}
+
+em strong{
+    color: red;
+    font-size: 20px;
+}
+
+#banner{
+    width: 100%; /* o % acompanha a página*/
+    height: 500px;
+}
+
+#missão{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

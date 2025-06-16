@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema De Multas</h1>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="div1">
+                <label for="VelocidadeMax">Velocidade Máxima da Via:</label>
+                <input type="number" id="VelocidadeMax">
+                <label for="VelocidadeV">Velocidade do Veículo</label>
+                <input type="number" id="VelocidadeV">
+                <button onclick="calculaVeloc()">Calcular</button>
+            </div>
+            <div class="div2">
+                <p>Multa por excesso de velocidade</p>
+                <p>R$ 130,16 - Até 20% acima do limite permitido</p>
+                <p>R$ 195,23 - De 20% até 50% acima do limite permitido</p>
+                <p>R$ 880,41 - Acima de 50% do limite permitido</p>
+            </div>
+        </section>
+        <section>
+            <div id="resultado"></div>
+        </section>
+        
+        <script>
+            function calculaVeloc(){
+                let velocidadeMax = Number(document.getElementById("VelocidadeMax").value)
+                let velocidadeV= Number(document.getElementById("VelocidadeV").value)
+
+                let saida=document.getElementById("resultado")
+                let limite1 = velocidadeMax*0.2
+                if (velocidadeV > velocidadeMax){
+                    let diferenca= velocidadeV-velocidadeMax
+                    let porcentagem= diferenca/velocidadeMax*100
+                    
+                    let multa = ""
+                    let cor= ""
+                    let corL =""
+                    if(porcentagem <=20){
+                        multa = "R$ 130,16"
+                        cor="green"
+                        corL="white"
+                    } else if (porcentagem <=50){
+                        multa = "R$ 195,23"
+                        cor="yellow"
+                        corL="black"
+                    } else {
+                        multa = "R$ 880,41"
+                        cor="red"
+                        corL="black"
+                    }
+                    saida.style.backgroundColor=cor
+                    saida.innerText = "Você excedeu " + porcentagem + "%. Sua multa é " + multa
+                }else{
+                    saida.innerText = "Sem Multas"
+                }
+        
+            }
+            
+        </script>
+    </main>
+    
+</body>
+</html>
