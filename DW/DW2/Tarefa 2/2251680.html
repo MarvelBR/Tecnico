@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+</head>
+<body>
+    <form action="servlet1" method="post">
+        <label for="Nome">Nome Completo:</label><br>
+        <input type="text" id="Nome" placeholder="Digite aqui seu Nome"><br>
+
+        <label for="Endereço">Endereço:</label><br>
+        <input type="text" id="Endereço" placeholder="Digite aqui seu Endereço"><br>
+
+        <label for="Data">Data de Nascimento:</label><br>
+        <input type="date" id="Data" placeholder="Digite aqui sua Data de Nascimento"><br>
+
+        <label for="Estado">Estado de Origem:</label><br>
+        <select name="estados" id="estados">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="DF">Distrito Federal</option>
+        </select>
+        <br>
+
+        <label for="Curso" id="Curso">Curso:</label><br>
+        <input type="text" list="Cursos" placeholder="Digite/Selecione seu Curso">
+        <datalist id="Cursos">
+            <option value="TI">Técnico Integrado em Informática</option>
+            <option value="BCC">Ciência da Computação</option>
+            <option value="EA">Engenharia Ambiental</option>
+            <option value="EL">Engenharia de Alimentos</option>
+            <option value="EC">Engenharia Civil</option>
+            <option value="EE">Engenharia Eletrônica</option>
+            <option value="EQ">Engenharia Química</option>
+            <option value="LQ">Licenciatura em Química</option>
+            <option value="TA">Tecnologia em Alimentos</option>
+        </datalist>
+        <br>
+
+        <fieldset> <legend>Período de Estudo:</legend>
+        <input type="radio" name="PE" value="Noturno" checked>
+        <label for="Noturno">Noturno</label>
+        <input type="radio" name="PE" value="Diurno">
+        <label for="Diurno">Diurno</label>
+        <input type="radio" name="PE" value="Integral">
+        <label for="Integral">Integral</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset> <legend>Meios de Transporte:</legend>
+        <input type="checkbox" name="Meios" id="pé" value="pé">
+        <label for="pé">A pé</label>
+
+        <input type="checkbox" name="Meios" id="onibus" value="onibus">
+        <label for="onibus">Ônibus</label>
+
+        <input type="checkbox" name="Meios" id="Carro" value="Carro">
+        <label for="Carro">Carro</label>
+
+        <input type="checkbox" name="Meios" id="Moto" value="Moto">
+        <label for="Moto">Moto</label>
+
+        <input type="checkbox" name="Meios" id="Bicicleta" value="Bicicleta">
+        <label for="Bicicleta">Bicicleta</label>
+
+        <input type="checkbox" name="Meios" id="Van" value="Van">
+        <label for="Van">Van</label>
+
+        <input type="checkbox" name="Meios" id="outro" value="outro">
+        <label for="outro">Outro</label>
+        </fieldset>
+
+        <br>
+
+        <label for="Comida">Comida Favorita:</label><br>
+        <select name="comidas" id="comidas">
+            <optgroup label="Frutas">
+                <option value="Ma">Maçã</option>
+                <option value="Ba">Banana</option>
+                <option value="La">Laranja</option>
+            </optgroup>
+            <optgroup label="Bebidas">
+                <option value="Coca">Coca</option>
+                <option value="Água">Água</option>
+                <option value="Suco">Suco</option>
+            </optgroup>
+            <optgroup label="Carnes">
+                <option value="Vaca">Vaca</option>
+                <option value="Porco">Porco</option>
+                <option value="Frango">Frango</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <label for="email" id="email">Email de Contato:</label><br>
+        <input type="email" name="email" placeholder="Digite seu Email"><br>
+
+        <label for="senha" id="senha">Senha:</label><br>
+        <input type="password" name="senha" placeholder="Digite sua Senha"><br>
+
+        <label for="telefone" id="telefone">Número de Telefone:</label><br>
+        <input type="tel" name="telefone" placeholder="Digite seu Número"><br>
+
+        <label for="Ano de Entrada" id="Ano de Entrada">Ano de Entrada na Instituição (2010-2021):</label><br>
+        <input type="number" placeholder="Digite seu Ano de Entrada na Instituição" min="2010" max="2021" value="2010">
+        <br>
+
+        <label for="cor" id="cor">Selecione sua Cor Favorita:</label><br>
+        <input type="color" name="cor"><br>
+
+        <label for="tempo" id="tempo">Selecione uma Hora:</label><br>
+        <input type="time" name="tempo"><br>
+
+        <label for="arquivo" id="arquivo">Selecione um Arquivo:</label><br>
+        <input type="file" name="arquivo"><br>
+
+        <label for="pagina" id="pagina">Selecione uma Página(url):</label><br>
+        <input type="url" name="pagina"><br>
+
+        <input type="image" src="https://imageproxy.ifunny.co/crop:square,resize:320x,quality:90x75/images/9fd339e7b891c68d16bb69bba5d33c323afdbbbc4f938edf8b99727189a46ce4_3.jpg" alt="submit" width="150" height="200">
+        <input type="image" src="https://i.kym-cdn.com/photos/images/newsfeed/002/111/316/c57.gif" alt="submit" width="150" height="200">
+        <br>
+        
+        <button type="submit" value="enviar">Enviar</button>
+        <button type="reset" value="apagar">Apagar</button>
+        <input type="button" onclick="alert('Otário kkkkkkkkkkk')" value="???">
+
+    </form>
+</body>
+</html>
