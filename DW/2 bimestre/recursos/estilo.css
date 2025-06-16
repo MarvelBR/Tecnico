@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@font-face {
+    font-family: Minecraft;
+    src: url('./fontes/gizmo.ttf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #E0AAFF;
+    --cor1: #C77DFF;
+    --cor2: #9D4EDD;
+    --cor3: #7B2CBF;
+    --cor4: #5A189A;
+    --cor5: #3C096C; 
+
+    --fonte-padrao: 'Times New Roman', Times, serif;
+    --fonte-destaque: 'Righteous', cursive;
+    --fonte-minecraft: 'Minecraft', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '⛏️';
+    font-size: 0.8em;
+}
+
+header{
+    /* gradiente na cor de fundo do cabeçalho */
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    /* Altura mínima de 150px */
+    min-height: 150px;
+    /* Alinhamento dos textos do cabeçalho */
+    text-align: center;
+    /* Margem superior interna para que o texto não fique colado no topo da página */
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 3em;
+    /* Margem externa inferior no h1 para criar um espaçamento*/
+    margin-bottom: 20px;
+    /* Sombra no título */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+
+    
+}
+
+header > p {
+    color: white;
+    font-size: 1.2em;
+    max-width: 600px;
+    /* Centralizar o parágrafo no meio do cabeçalho */
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* Sombra no título */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: var(--cor5);
+    /* Adição de margens internas para amplicar a área do menu */
+    padding: 10px;
+    /* sombra inferior com transparência */
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.562);
+}
+
+
+/* Estilização dos links do menu */
+nav > a{
+    color: white;
+    /* Espaçamento entre os itens com a margem interna */
+    padding: 10px;
+    /* Remover o sublinhado */
+    text-decoration: none;
+    /* Define a fonte como negrito */
+    font-weight: bold;
+    /* Arredonda os cantos */
+    border-radius: 5px;
+    /* Adiciona um efeito de transição */
+    transition-duration: 0.3s;
+}
+
+/* Estilização para quando o mouse estiver sobre os links do menu */
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main{
+    background-color: white;
+    /* Não permitirá que o elemento seja redimensionado para um tamanho MENOR do que 300px */
+    min-width: 300px;
+    /* Não permitirá que o elemento seja redimensionado para um tamanho MAIOR do que 1000px */
+    max-width: 1000px;
+    /* centraliza o elemento na tela */ 
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* Sobra nas laterais */
+    box-shadow: 0px 0px 10px gray;
+    /* Arredondamento das bordas inferiores */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-minecraft);
+    font-weight: normal;
+    font-size: 55px;
+}
+
+main h2 {
+    color: var(--cor4);
+    font-family: var(--fonte-minecraft);
+    font-size: 40px;
+    font-weight: normal;
+    /* Adiciona um degrade no fundo do título de um tom de cinza até transparente */
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.507), transparent);
+    /* Adiciona um espaço a esquerda */
+    text-indent: 8px;
+}
+
+/* Estilização dos parágrafos que estão dentro da main */
+main p {
+    /* Margem cima/baixo de 15px e esquerda/direita de 0px */
+    margin: 15px 0px;
+    text-align: justify;
+    /* Recuo da primeira linha */
+    text-indent: 30px;
+    /* Altura da linha */
+    line-height: 1.5em;
+}
+
+/* Estilização dos textos marcados com strong dentro da main */
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+/* Estilização dos links que estão dentro da main */
+main a {
+    /* Remoção do sublinhado */
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor1);
+    color: var(--cor5);
+    /* Aumento da borda interna */
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+/* Estilização para quando o mouse estiver sobre os links da main */
+main a:hover {
+    /* Adiciona o sublinhado */
+    text-decoration: underline;
+    color: var(--cor4);
+    
+}
+
+main img {
+    /* Determina a largura da imagem para ocupar 100% da tela */
+    width: 100%;
+}
+
+main img#arma {    
+    max-width: 100px;
+    margin: auto;
+    /* Como o display padrão do img é "inline", precisamos alterar o para "block" para que o "margin:auto" centralize a imagem na tela. */
+    display: inline-block;
+}
+
+main img#armadura {    
+    max-width: 75px;
+    margin: 0%;
+    /* Como o display padrão do img é "inline", precisamos alterar o para "block" para que o "margin:auto" centralize a imagem na tela. */
+    display: inline-block;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.384);
+}
+
+
+aside > ul {
+    list-style: none;    
+}
+
+aside > ul > li::before {
+    /* Mais emojis podem ser encontrados em> https://emojipedia.org/ */
+    content: '⚔️';        
+    font-size: 0.8em;
+}
+
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+
