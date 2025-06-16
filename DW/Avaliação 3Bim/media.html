@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recursos/style.css" />
+    <title>Trabalho DW</title>
+    <link rel="icon" type="imagem/png" href="./recursos/imagens/icone.png" />
+</head>
+
+<body>
+    <header>
+        <h1>MEMÓRIAS PÓSTUMAS DE BRÁS CUBAS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./apresentação.html">Apresentação</a>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#utfpr">O que é UTFPR?</a></li>
+            </ul></li>
+            <li><a href="./livro.html">Livro</a>
+            <ul>
+                <li><a href="#persons">Personagens</a></li>
+                <li><a href="#resumo">Resumo</a></li>
+                <li><a href="">Autor</a></li>
+            </ul></li>
+            <li><a href="./person1.html">Vírgilia</a></li>
+            <li><a href="./person2.html">Sabina</a></li>
+            <li><a href="./person3.html">Marcela</a></li>
+            <li><a href="./media.html">Media Query</a>
+                <ul>
+                    <li><a href="#mediaquery">Media Query</a></li>
+                    <li><a href="#mediatype">Media Type</a></li>
+                    <li><a href="#sintaxe">Sintaxe</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul></li>
+        </ul>
+    
+    </nav>
+    <main>
+        <section class="main-sessaoprincipal">
+            <div class="main-sessaoprincipal-media">
+                <h2 id="mediaquery">Media Query</h2>
+                <p>Media queries consistem de um media type e podem, a partir de uma especificação CSS3, contendo uma ou
+                    mais expressões, expressa em media features, que determinam ou verdadeiro ou falso.
+                    Se a condição e/ou tipos de mídia coincidirem, as regras dentro da media query serão aplicadas, o
+                    que não ocorre em outras circunstâncias.
+                </p>
+
+
+                <h2 id="mediatype">Media Type</h2>
+                <p>Os media types definem para que tipo de media um certo código CSS é direcionado. O HTML foi gerado
+                    para ser portátil, ou seja, lido e interpretado por qualquer tipo de dispositivo. Só que cada
+                    dispositivo exibe o HTML de uma maneira, devido a fatores como, por exemplo, as dimensões da tela.
+                </p>
+                <p>Para que possamos manter nossas páginas sempre adequadas a cada tipo de visualização, utilizamos os
+                    media types, que são listados abaixo de acordo com sua utilização.
+                </p>
+
+                <ul >
+                    <li>All: Para todos os dispositivos.</li>
+                    <li>Braille: Para dispositivos táteis.</li>
+                    <li>Embossed: Para dispositivos que imprimem em braile.</li>
+                    <li>Handheld: Para dispositivos portáteis, geralmente com telas pequenas e banda limitada.</li>
+                    <li>Print: Para impressão em papel.</li>
+                    <li>Projection: Para apresentações como PPS.</li>
+                    <li>Screen: Para monitores ou dispositivos com telas coloridas e resolução adequada.</li>
+                    <li>Speech: Para sintetizadores de voz. As CSS 2 tem uma especificação de CSS chamada Aural, onde
+                        podemos formatar a voz dos sintetizadores.</li>
+                    <li>Tty: Para dispositivos que possuem uma grade fixa para exibição de caracteres, tais como:
+                        Teletypes, Terminais e também dispositivos portáteis com display limitados.</li>
+                    <li>Tv: Para dispositivos como televisores, ou seja, com baixa resolução, quantidade de cores e
+                        scroll limitados.</li>
+                </ul>
+                <h2 id="sintaxe">Sintaxe</h2>
+
+                <div id="code">
+                    <pre><code>@media tipo de mídia and (condição: breakpoint) {
+                        // regras de CSS
+          }</code></pre>
+                </div>
+                <h4>Regra de @Media</h4>
+                <p>Começamos definindo media queries com a regra @media e, depois, incluímos as regras de CSS dentro das
+                    chaves. </p>
+
+                <div div id="code">
+                    <pre><code>@media () {
+                        // regras de CSS
+                      }</pre>
+                    </code>
+                </div>
+                <h4>Parênteses</h4>
+                <p>Dentro dos parênteses, definimos uma condição. Por exemplo, queremos aplicar um tamanho de fonte
+                    maior para dispositivos móveis. Para fazer isso, precisamos definir uma largura máxima, que é
+                    verificada em comparação com a largura de um dispositivo:</p>
+
+                <div id="code">
+                    <pre><code>.text {
+                        font-size: 14px;
+                      }
+                      
+                      @media (max-width: 480px) {
+                        .text {
+                          font-size: 16px;
+                        }
+                      }</code></pre>
+                </div>
+                <h4>Tipos de Mídia</h4>
+                <p>Se não aplicarmos um tipo de mídia, a regra de @media selecionará todos os tipos de dispositivo por
+                    padrão. Do contrário, os tipos de mídia vêm logo após a regra de @media. </p>
+                <p>Por exemplo, quando eu desejo selecionar apenas as telas, usarei a palavra-chave screen logo após a
+                    regra de @media. Também concatenarei as regras com a palavra-chave “and”:</p>
+
+                <div id="code">
+                    <pre><code>@media screen and (max-width: 480px) {
+                        .text {
+                          font-size: 16px;
+                        }
+                      }</code></pre>
+                </div>
+                <h4>Breakpoints</h4>
+                <p>Um breakpoint é uma chave para determinar o momento de mudar o layout e adaptá-lo às novas regras
+                    dentro das media queries. </p>
+
+                <div id="code">
+                    <pre><code>@media (max-width: 480px) {
+                    .text {
+                      font-size: 16px;
+                    }
+                  }</code></pre>
+                </div>
+                <p>No exemplo acima, o breakpoint é 480px</p>
+                <h4>Aluguns Breakpoints em Larguras de Dispositivos</h4>
+                    <ul>
+                        <li>320px — 480px: dispositivos móveis</li>
+                        <li>481px — 768px: iPads, tablets</li>
+                        <li>769px — 1024px: telas pequenas, laptops</li>
+                        <li>1025px — 1200px: desktops, telas grandes</li>
+                    </ul>
+                </br>
+                <p class="exemplo">Veja aqui um exemplo de Media Query: <a href="./exemplo.html" target="_blank">  Clique aqui!</a></p>
+
+                <h2 id="conclusao">Conclusão</h2>
+                <p>Sintetizando, uma media query nada mais é do que um recurso do CSS3 que faz com que uma página da web se adapte ao seu
+                    layout para tamanhos de tela e tipos de mídia diferentes. Por isso,media queries são uma das partes mais importantes na criação de layouts responsivos, tendo em vista que é uma obrigação o uso de um design responsivo nos campos de design e desenvolvimento para a web atualmente.</p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

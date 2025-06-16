@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+@font-face {
+    font-family: Titulo;
+    src: url('./fontes/Latinotype\ -\ ShowcaseSansMini.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Perfil;
+    src: url(./fontes/BetmSemiLight.otf) format('opentype');
+    font-weight: normal;
+}
+
+
+:root {
+    --header: #CC5803;
+    --header2: #FF9505;
+    --destaque: #fdfcdc;
+    --fundo: #FFB627;
+    --lateral: #FFC971;
+    --titulo: 'Titulo', cursive;
+    --fonte-padrao: 'Times New Rowman', Verdana, Helvetica, sans-serif;
+    --texto: 'Nunito', sans-serif;
+    --perfil: 'Perfil', sans-serif;
+    --fonte-perfil: 'Sofia', cursvie;
+
+    --simbol: '➔';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header);
+    font-family: var(--titulo);
+    background-image: linear-gradient(to bottom, var(--header2), var(--header));
+    height: 150px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    font-family: var(--fonte-padrao);
+    height: 75px;
+    width: auto;
+    background-color: var(--header);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.562);
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgb(31, 31, 31);
+    background: var(--fundo);
+
+}
+nav ul li a:hover {
+    transition: 0.3s;
+    font-size: 22px;
+    background-color: var(--header2);
+}
+nav ul li ul li a:hover {
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    position: relative;
+    
+}
+nav ul li:hover ul {
+    
+    display: block;
+}
+nav ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    background-color: var(--lateral);
+    border-radius: 10px;
+}
+nav ul ul li a {
+    display: block;
+    color: black;
+    font-size: 15px;
+    
+}
+.main-sessaoprincipal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 3;
+    background: var(--fundo);
+    font-family: var(--titulol);
+}
+
+.main-sessaoprincipal>img {
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.main-sessaolateral {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-grow: 1;
+    background: var(--lateral);
+    font-size: 25px;
+    font-family: var(--fonte-perfil);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.562);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main-sessaoprincipal>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 900px;
+    height: auto;
+    padding: 30px;
+    background: var(--destaque);
+    text-align: justify;
+
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.562);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.main-sessaolateral>div {
+    display: flex;
+    align-self: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--fonte-perfil);
+    width: 250px;
+    margin: 30px;
+    padding: 30px;
+    row-gap: 30px;
+
+}
+
+.main-sessaoprincipal img {
+    border: 3px solid whitesmoke;
+    width: 700px;
+    height: auto;
+
+}
+
+.main-sessaolateral img {
+    width: 250px;
+    height: auto;
+}
+
+.main-sessaoprincipal>div>p {
+    display: flex;
+    font-family: var(--texto);
+    font-size: 22px;
+}
+
+.personagens>ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-right: 30px ;
+    list-style-type: var(--simbol);
+}
+
+.personagens {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 30px;
+    font-family: var(--texto);
+
+}
+
+.introducao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--texto);
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+
+}
+.introducao2{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align:start;
+    
+}
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--texto);
+    font-size: 20px;
+    row-gap: 25px;
+}
+.alunos{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.alunos>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+    padding-left:70px;
+    font-family: var(--fonte-perfil);
+    font-weight: bolder;
+}
+.alunos>div>div>img{
+    border: none;
+    width: 200px;
+    height: auto;
+}
+.professores{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.professores>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+    padding-left:70px;
+    font-family: var(--fonte-perfil);
+    font-weight: bolder;
+}
+.main-sessaoprincipal-media>ul{
+    text-align: start;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 50px ;
+    list-style-type: var(--simbol);
+    font-family: var(--fonte-padrao);
+}
+
+
+.texto {
+    width: 300px;
+}
+
+.index {
+    width: 1500px;
+}
+
+.resumo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--texto);
+    font-size: 20px;
+    row-gap: 10px;
+}
+
+#Livro {
+    width: 250px;
+    height: auto;
+}
+
+#persons {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 80px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    padding-left: 20px;
+    font-size: 26px;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--lateral), transparent);
+    font-family: var(--lateraltext);
+}
+h3{
+    color: var(--header);
+    font-family: var(--fonte-perfil);
+}
+h4{
+    font-family: var(--lateraltext);
+    text-align: start;
+    font-size: 25px;
+    font-weight: bolder;
+}
+#code{
+    font-size: larger;
+    text-align: start;
+    border-radius: 10px;
+    background-color:rgb(184, 178, 178);
+    padding: 10px;
+    width: 800px;
+    height: auto;
+}
+
+hr {
+    border-color: var(--header);
+    background-color: var(--header);
+}
+
+
+
+#lateral1 {
+    display: flex;
+    row-gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--perfil);
+}
+
+#machado {
+    border: none;
+    width: 200px;
+    height: auto;
+    padding-right: 50px;
+}
+#utfpr{
+    display: flex;
+    justify-content: center;
+}
+.video{
+    display: flex;
+    align-self: center;
+}
+footer {
+    background-color: var(--header);
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.main-sessaoprincipal > .main-sessaoprincipal-media > .exemplo{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px ;
+}
+
+.autor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--texto);
+    font-size: 20px;
+    row-gap: 10px;
+}

@@ -1,0 +1,285 @@
+@font-face {
+    src: url(Lato-Regular.ttf) format('opentype');
+    font-family: Texto;  
+    font-weight: normal;
+} 
+
+@font-face {
+    src: url(Roboto-Medium.ttf) format('opentype');
+    font-family: Botão;  
+    font-weight: normal;
+}
+
+:root{
+    --cor_um: #dcdcdc;
+    --cor_dois: #7030a0;
+
+    --font_botao: 'Botão', cursive;
+    --font_texto: 'Texto', cursive;
+}
+
+
+body {
+    margin: 0;
+}
+
+.background{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url(fundo.jpg);
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 250px;
+    text-decoration: none;
+    color: black;
+    padding-top: 20px;
+    
+}
+
+.header-login{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 100px;
+    text-decoration: none;
+    color: black;
+    padding-top: 20px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+p{
+    font-family: var(--font_texto);
+    margin: 0;
+}
+
+.imagem{
+    display: flex;
+    height: 150px;
+    padding-right: 300px;
+    padding-left: 450px;
+}
+
+.login{
+    background-color: var(--cor_um);
+    height: 50px;
+    width: 100%;
+    font-size: xx-large;
+    border-radius: 10px;
+    font-family: var(--font_botao);
+}
+
+.meio-index{
+    color: white;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.padrão{
+    background-color: var(--cor_dois);
+    height: 50px;
+    font-size: xx-large;
+    border-radius: 10px;
+    font-family: var(--font_botao);
+}
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+
+.login > a{
+    text-decoration: none;
+    color: #000;
+}
+
+.padrão > a{
+    text-decoration: none;
+    color: white;
+}
+
+.senha > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+.final-login > div > a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.meio-login{
+    display: flex;
+    color: white;
+    font-size: 30px;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+label{
+    color: white;
+    font-size: 30px;
+    font-family: var(--font_texto);
+}
+
+input{
+    height: 40px;
+    font-family: var(--font_texto);
+}
+
+.senha{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    padding-bottom: 40px;
+}
+
+.senha > p{
+    display: flex;
+    padding-left: 25px;
+}
+
+.final-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 30px;
+    color: white;
+    row-gap: 20px;
+    font-family: var(--font_texto);
+}
+
+.header-loja{
+    display: flex;
+    color: white;
+    font-size: 40px;
+}
+
+.meio-loja{
+    display: flex;
+    font-size: 30px;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.capa{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+}
+
+.boneco{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 285px;
+    padding-right: 60px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+}
+
+.lojinha{
+    display: flex;
+    padding-right: 300px;
+    padding-left: 450px;
+}
+
+.header-esqueci{
+    display: flex;
+    color: white;
+    font-size: 40px;
+}
+
+.header-registro{
+    display: flex;
+    color: white;
+    font-size: 30px;
+}
+
+.header-usuario{
+    display: flex;
+    color: white;
+    font-size: 30px;
+}
+
+.conta{
+    color: white;
+    font-size: 25px;
+}
+
+.main-registro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: var(--font_texto);
+}
+
+.meio-registro-1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.meio-registro-2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+select{
+    height: 40px;
+    font-family: var(--font_texto);
+}
+
+.patrono{
+    display: flex;
+    padding-bottom: 60px;
+}
+
+.main-usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font_texto);
+}
+
+.meio-usuario-1{
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    padding-bottom: 100px;
+}
+
+.meio-usuario-2{
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    padding-bottom: 45px;
+}
