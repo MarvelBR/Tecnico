@@ -1,0 +1,78 @@
+
+.container{
+    background-color: aquamarine;
+
+    height: 100vh;
+    display: flex;
+
+    /* Definindo o eixo principal */
+    
+    flex-direction: column;      /* coluna */
+    flex-direction: row-reverse;       /* linha reversa */
+    flex-direction: column-reverse; /* coluna reversa */
+    flex-direction: row;     /* linha */
+
+    /* Alinhando os elementos no eixo principal */
+
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
+
+    /* Alinhando os elementos no eixo secundário */
+    align-items: flex-end;
+    align-items: flex-start;
+    align-items: center;
+
+    /* Definir se os elementos do eixo principal irão para a próxima linha */
+    flex-wrap: nowrap;
+    flex-wrap: wrap-reverse; /* quebra a linha pra cima */
+    flex-wrap: wrap; /* quebra linha */
+
+    /* Alinhando as linhas no eixo secundário (para quando existe mais do que uma linha) */
+    
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-between;
+    align-content: center;
+
+    /* Atalho para as propriedades flex-direction e flex-warp */
+    /*flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+
+    /* Fixando um tamanho no espaço entre os elementos */
+    gap: 10px 30px;
+    row-gap: 10px;
+    column-gap: 30px;
+
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.box1 {
+    background-color: blueviolet;
+
+}
+
+.box2 {
+    background-color:blue;
+
+}
+
+.box3 {
+    background-color:darkorange;
+
+}
+
+.box4 {
+    background-color:magenta;
+
+}
